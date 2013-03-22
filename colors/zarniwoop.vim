@@ -9,7 +9,7 @@
 "  "                                               | |     "
 "  "                                               |_|     "
 "
-"         "A colorful, dark colour scheme for Vim."
+"         "A colourful, dark colour scheme for Vim."
 "
 " File:         zarniwoop.vim
 " URL:          github.com/xironix/zarniwoop.vim
