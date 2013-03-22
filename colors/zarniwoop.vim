@@ -371,7 +371,7 @@ hi! link Operator Structure
 call s:X("Type","ffb964","","","Yellow","")
 call s:X("NonText","606060",g:zarniwoop_background_color,"",s:termBlack,"")
 
-call s:X("SpecialKey","444444","1c1c1c","",s:termBlack,"")
+call s:X("SpecialKey","ffffff","0000bf","","White","DarkBlue")
 
 call s:X("Search","ffffff","bf0000","","White","DarkRed")
 
