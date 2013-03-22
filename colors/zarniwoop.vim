@@ -349,7 +349,7 @@ call s:X("WildMenu","e1e600","222222","","Yellow","")
 call s:X("Folded","a0a8b0","384048","italic",s:termBlack,"")
 call s:X("FoldColumn","535D66","1f1f1f","","",s:termBlack)
 call s:X("SignColumn","777777","333333","","",s:termBlack)
-call s:X("ColorColumn","","000000","","",s:termBlack)
+call s:X("ColorColumn","","222222","","","DarkGrey")
 
 call s:X("Title","70b950","","bold","Green","")
 
