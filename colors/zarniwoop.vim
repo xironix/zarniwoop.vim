@@ -1,28 +1,34 @@
 " Vim color file
 "
-"  "    __       _ _       _                             "
-"  "    \ \  ___| | |_   _| |__   ___  __ _ _ __  ___    "
-"  "     \ \/ _ \ | | | | |  _ \ / _ \/ _  |  _ \/ __|   "
-"  "  /\_/ /  __/ | | |_| | |_| |  __/ |_| | | | \__ \   "
-"  "  \___/ \___|_|_|\__  |____/ \___|\____|_| |_|___/   "
-"  "                 \___/                               "
+"  "   ______                 _                            "
+"  "  |___  /                (_)                           "
+"  "     / /  __ _ _ __ _ __  ___      _____   ___  _ __   "
+"  "    / /  / _` | '__| '_ \| \ \ /\ / / _ \ / _ \| '_ \  "
+"  "  ./ /__| (_| | |  | | | | |\ V  V / (_) | (_) | |_) | "
+"  "  \_____/\__,_|_|  |_| |_|_| \_/\_/ \___/ \___/| .__/  "
+"  "                                               | |     "
+"  "                                               |_|     "
 "
-"         "A colorful, dark color scheme for Vim."
+"         "A colorful, dark colour scheme for Vim."
 "
-" File:         jellybeans.vim
-" URL:          github.com/nanotech/jellybeans.vim
-" Scripts URL:  vim.org/scripts/script.php?script_id=2555
-" Maintainer:   NanoTech (nanotech.nanotechcorp.net)
-" Version:      1.6~git
-" Last Change:  January 15th, 2012
+" File:         zarniwoop.vim
+" URL:          github.com/xironix/zarniwoop.vim
+" Scripts URL:  
+" Maintainer:   Steffen L. Norgren <github@trollop.org>
+" Version:      1.0
+" Last Change:  March 22nd, 2013
 " License:      MIT
-" Contributors: Daniel Herbert (pocketninja)
+" Contributors: NanoTech (nanotech.nanotechcorp.net)
+"               Daniel Herbert (pocketninja)
 "               Henry So, Jr. <henryso@panix.com>
 "               David Liang <bmdavll at gmail dot com>
 "               Rich Healey (richo)
 "               Andrew Wong (w0ng)
+" NOTES:        This colour is based on the Jellybeans
+"               theme by NanoTech. It has been modified to
+"               better suit my tastes. =p
 "
-" Copyright (c) 2009-2012 NanoTech
+" Copyright (c) 2009-2013 Steffen L. Norgren
 "
 " Permission is hereby granted, free of charge, to any per‐
 " son obtaining a copy of this software and associated doc‐
@@ -55,7 +61,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "jellybeans"
+let colors_name = "zarniwoop"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
   let s:low_color = 0
@@ -64,7 +70,8 @@ else
 endif
 
 " Color approximation functions by Henry So, Jr. and David Liang {{{
-" Added to jellybeans.vim by Daniel Herbert
+" Originally added to jellybeans.vim by Daniel Herbert and duplicated
+" within zarniwoop.vim by Steffen L. Norgren.
 
 " returns an approximate grey index for the given grey level
 fun! s:grey_number(x)
@@ -297,21 +304,21 @@ fun! s:X(group, fg, bg, attr, lcfg, lcbg)
 endfun
 " }}}
 
-if !exists("g:jellybeans_background_color")
-  let g:jellybeans_background_color = "151515"
+if !exists("g:zarniwoop_background_color")
+  let g:zarniwoop_background_color = "000000"
 end
 
-call s:X("Normal","e8e8d3",g:jellybeans_background_color,"","White","")
+call s:X("Normal","e8e8d3",g:zarniwoop_background_color,"","White","")
 set background=dark
 
-if !exists("g:jellybeans_use_lowcolor_black") || g:jellybeans_use_lowcolor_black
+if !exists("g:zarniwoop_use_lowcolor_black") || g:zarniwoop_use_lowcolor_black
     let s:termBlack = "Black"
 else
     let s:termBlack = "Grey"
 endif
 
 if version >= 700
-  call s:X("CursorLine","","1c1c1c","","",s:termBlack)
+  call s:X("CursorLine","","151515","","",s:termBlack)
   call s:X("CursorColumn","","1c1c1c","","",s:termBlack)
   call s:X("MatchParen","ffffff","80a090","bold","","DarkCyan")
 
@@ -324,16 +331,18 @@ if version >= 700
   call s:X("PmenuSel","101010","eeeeee","",s:termBlack,"White")
 endif
 
-call s:X("Visual","","404040","","",s:termBlack)
-call s:X("Cursor","","b0d0f0","","","")
+call s:X("Visual","ffffff","1a1a1a","","",s:termBlack)
+call s:X("Cursor","000000","d0d0d0","","","")
+call s:X("iCursor","","d0d0d0","","","")
 
-call s:X("LineNr","605958",g:jellybeans_background_color,"none",s:termBlack,"")
+call s:X("LineNr","605958",g:zarniwoop_background_color,"none",s:termBlack,"")
 call s:X("CursorLineNr","ccc5c4","","none","White","")
 call s:X("Comment","888888","","italic","Grey","")
 call s:X("Todo","c7c7c7","","bold","White",s:termBlack)
 
-call s:X("StatusLine","000000","dddddd","italic","","White")
-call s:X("StatusLineNC","ffffff","403c41","italic","White","Black")
+call s:X("StatusLine","f0f0f0","222222","italic","White","Black")
+call s:X("StatusLineNC","a0a0a0","181818","italic","White","Black")
+
 call s:X("VertSplit","777777","403c41","",s:termBlack,s:termBlack)
 call s:X("WildMenu","f0a0c0","302028","","Magenta","")
 
@@ -360,7 +369,7 @@ call s:X("PreProc","8fbfdc","","","LightBlue","")
 hi! link Operator Structure
 
 call s:X("Type","ffb964","","","Yellow","")
-call s:X("NonText","606060",g:jellybeans_background_color,"",s:termBlack,"")
+call s:X("NonText","606060",g:zarniwoop_background_color,"",s:termBlack,"")
 
 call s:X("SpecialKey","444444","1c1c1c","",s:termBlack,"")
 
@@ -495,8 +504,8 @@ call s:X("IndentGuidesEven","","1b1b1b","","","")
 hi! link TagListFileName Directory
 call s:X("PreciseJumpTarget","B9ED67","405026","","White","Green")
 
-if !exists("g:jellybeans_background_color_256")
-  let g:jellybeans_background_color_256=233
+if !exists("g:zarniwoop_background_color_256")
+  let g:zarniwoop_background_color_256=233
 end
 " Manual overrides for 256-color terminals. Dark colors auto-map badly.
 if !s:low_color
@@ -507,16 +516,16 @@ if !s:low_color
   hi CursorColumn ctermbg=234
   hi CursorLine ctermbg=234
   hi SpecialKey ctermbg=234
-  exec "hi NonText ctermbg=".g:jellybeans_background_color_256
-  exec "hi LineNr ctermbg=".g:jellybeans_background_color_256
+  exec "hi NonText ctermbg=".g:zarniwoop_background_color_256
+  exec "hi LineNr ctermbg=".g:zarniwoop_background_color_256
   hi DiffText ctermfg=81
-  exec "hi Normal ctermbg=".g:jellybeans_background_color_256
+  exec "hi Normal ctermbg=".g:zarniwoop_background_color_256
   hi DbgBreakPt ctermbg=53
   hi IndentGuidesOdd ctermbg=235
   hi IndentGuidesEven ctermbg=234
 endif
 
-if exists("g:jellybeans_overrides")
+if exists("g:zarniwoop_overrides")
   fun! s:load_colors(defs)
     for [l:group, l:v] in items(a:defs)
       call s:X(l:group, get(l:v, 'guifg', ''), get(l:v, 'guibg', ''),
@@ -534,7 +543,7 @@ if exists("g:jellybeans_overrides")
       unlet l:v
     endfor
   endfun
-  call s:load_colors(g:jellybeans_overrides)
+  call s:load_colors(g:zarniwoop_overrides)
   delf s:load_colors
 endif
 
