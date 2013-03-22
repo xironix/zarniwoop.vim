@@ -13,9 +13,9 @@
 "
 " File:         zarniwoop.vim
 " URL:          github.com/xironix/zarniwoop.vim
-" Scripts URL:  
+" Scripts URL:  http://www.vim.org/scripts/script.php?script_id=4483
 " Maintainer:   Steffen L. Norgren <github@trollop.org>
-" Version:      1.0
+" Version:      1.1
 " Last Change:  March 22nd, 2013
 " License:      MIT
 " Contributors: NanoTech (nanotech.nanotechcorp.net)
