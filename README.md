@@ -7,9 +7,9 @@ Designed primarily for a graphical Vim, but includes support for 256, 88, 16,
 and 8 color terminals. On a 16 or 8 color terminal, replace its colors with
 those in `ansi-term-colors.txt` for best results.
 
-This script is [vimscript #4483][vimscript] at Vim.org.
+This script is [vimscript #4483](http://www.vim.org/scripts/script.php?script_id=4483) at Vim.org.
 
-Scroll down for [screenshot][ss-anchor]!
+Scroll down for [screenshots](#screenshot)!
 
 ## Options
 
@@ -46,10 +46,6 @@ mappings, add
     let g:zarniwoop_use_lowcolor_black = 0
 
 to your .vimrc to render “black” text as Vim’s grey (ANSI white).
-
-Users of Apple’s pre-10.7 Terminal.app can use the TerminalColours
-plugin ([Leopard][tc-leopard], [Snow Leopard][tc-snowleopard]) to
-change the default colors.
 
 ## Screenshot
 
